@@ -7,6 +7,7 @@
 
 import UIKit
 import IQKeyboardManager
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,9 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleKeyboard()
 
         setFakeData()
-
+        
         return true
     }
+    
+    // MARK: - Core Data stack
+    lazy var persistentContainer: NSPersistentContainer = { // persistent container
+        let container = NSPersistentContainer(name: "ArticleCoreDataModel")
+        container.loadPersistentStores(completionHandler: { _, error in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
 }
 
 extension AppDelegate {

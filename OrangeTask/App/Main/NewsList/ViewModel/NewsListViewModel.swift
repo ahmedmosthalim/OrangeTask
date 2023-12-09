@@ -58,6 +58,9 @@ extension NewsListViewModel {
             guard let self = self else { return }
             hideIndicator()
             self.newsData.send(response.articles)
+            response.articles.forEach { article in
+                DataPersistenceManager.shared.saveArticle(model: article)
+            }
         }
     }
 }

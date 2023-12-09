@@ -11,6 +11,8 @@
 		EE08A0962B23374A000C2635 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE08A0942B23374A000C2635 /* NewsListCell.swift */; };
 		EE08A0972B23374A000C2635 /* NewsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE08A0952B23374A000C2635 /* NewsListCell.xib */; };
 		EE08A0992B235B88000C2635 /* animation_500_le72a9pc.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE08A0982B235B87000C2635 /* animation_500_le72a9pc.gif */; };
+		EE382D052B24861B000F6045 /* ArticleCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE382D032B24861B000F6045 /* ArticleCoreDataModel.xcdatamodeld */; };
+		EE382D072B2489FE000F6045 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE382D062B2489FE000F6045 /* DataPersistenceManager.swift */; };
 		EE70BA4E2B247E8C007DAB06 /* SimpleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70BA4D2B247E8C007DAB06 /* SimpleTextView.swift */; };
 		EEBAECED2B2259CF00FD1028 /* TopAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBAECE92B2259CF00FD1028 /* TopAlert.swift */; };
 		EEBAECEE2B2259CF00FD1028 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEBAECEA2B2259CF00FD1028 /* AlertView.xib */; };
@@ -118,6 +120,8 @@
 		EE08A0942B23374A000C2635 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		EE08A0952B23374A000C2635 /* NewsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsListCell.xib; sourceTree = "<group>"; };
 		EE08A0982B235B87000C2635 /* animation_500_le72a9pc.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation_500_le72a9pc.gif; sourceTree = "<group>"; };
+		EE382D042B24861B000F6045 /* ArticleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleModel.xcdatamodel; sourceTree = "<group>"; };
+		EE382D062B2489FE000F6045 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		EE70BA4D2B247E8C007DAB06 /* SimpleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextView.swift; sourceTree = "<group>"; };
 		EEBAECE92B2259CF00FD1028 /* TopAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAlert.swift; sourceTree = "<group>"; };
 		EEBAECEA2B2259CF00FD1028 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
@@ -254,6 +258,31 @@
 				EE08A0952B23374A000C2635 /* NewsListCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EE382D002B2485C8000F6045 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EE382D022B2485F5000F6045 /* Model */,
+				EE382D012B2485E9000F6045 /* Mangers */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EE382D012B2485E9000F6045 /* Mangers */ = {
+			isa = PBXGroup;
+			children = (
+				EE382D062B2489FE000F6045 /* DataPersistenceManager.swift */,
+			);
+			path = Mangers;
+			sourceTree = "<group>";
+		};
+		EE382D022B2485F5000F6045 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE382D032B24861B000F6045 /* ArticleCoreDataModel.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EEBAECE72B2259CF00FD1028 /* Alert */ = {
@@ -411,6 +440,7 @@
 		EEE101302B2257B700906528 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				EE382D002B2485C8000F6045 /* CoreData */,
 				EEE101312B2257B700906528 /* UserDefaultsExtensions.swift */,
 			);
 			path = Storage;
@@ -892,6 +922,7 @@
 				EEE101872B2257B900906528 /* AppIndicator.swift in Sources */,
 				EEBAECF92B225E6700FD1028 /* AppTextView.swift in Sources */,
 				EEE101792B2257B900906528 /* Constants.swift in Sources */,
+				EE382D052B24861B000F6045 /* ArticleCoreDataModel.xcdatamodeld in Sources */,
 				EEE101AA2B2257B900906528 /* APIParameters.swift in Sources */,
 				EEE1019D2B2257B900906528 /* Collection.swift in Sources */,
 				EEE101242B2257AF00906528 /* Language.swift in Sources */,
@@ -917,6 +948,7 @@
 				EEE1012D2B2257AF00906528 /* localizeStringExtension.swift in Sources */,
 				EEBAECEF2B2259CF00FD1028 /* AlertView.swift in Sources */,
 				EEBAED042B226DA700FD1028 /* SplashVC.swift in Sources */,
+				EE382D072B2489FE000F6045 /* DataPersistenceManager.swift in Sources */,
 				EEE101AB2B2257B900906528 /* Constant.swift in Sources */,
 				EEE101A32B2257B900906528 /* AppHelper.swift in Sources */,
 				EEE101D02B22586800906528 /* NewsListVC.swift in Sources */,
@@ -1230,6 +1262,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE382D032B24861B000F6045 /* ArticleCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE382D042B24861B000F6045 /* ArticleModel.xcdatamodel */,
+			);
+			currentVersion = EE382D042B24861B000F6045 /* ArticleModel.xcdatamodel */;
+			path = ArticleCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EEE100C82B2256A300906528 /* Project object */;
 }
