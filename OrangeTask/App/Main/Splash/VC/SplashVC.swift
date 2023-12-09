@@ -11,7 +11,8 @@ import UIKit
 class SplashVC: UIViewController {
     // MARK: - IBOutlets -
 
-
+    @IBOutlet weak var mainStackView: UIStackView!
+    
     // MARK: - Properties -
 
     static func create() -> SplashVC {
@@ -34,6 +35,7 @@ class SplashVC: UIViewController {
     func setupDesign() {
         let window = UIApplication.shared.windows.first
         window?.backgroundColor = Theme.colors.mainColor
+        mainStackView.animateToTop()
     }
 
     // MARK: - Logic Methods -
