@@ -1,0 +1,19 @@
+/*
+  Localizable.strings
+
+ Created by Ahmed Mostafa
+
+*/
+
+"News"              = "الأخبار";
+"Search"            = "البحث";
+"Open with Safari"  = "افتح باستخدام سفاري";
+"Author :"          = "الكاتب :";
+"Source :"          = "المصدر :";
+"Description :"     = "الوصف :";
+"Content :"         = "المحتوى :";
+
+"Change The Language" = "تغيير اللغة";
+"Would you like to use Arabic as your primary language?" = "هل ترغب في استخدام اللغة الانجليزية كلغتك الأساسية؟";
+"Change" = "تغيير";
+"Cancel" = "إلغاء";
