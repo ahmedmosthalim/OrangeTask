@@ -93,9 +93,16 @@ extension APIRouter {
                 } else if let errorType = errorType {
                     switch errorType {
                     case .connectionError:
+                        var response = NewsModel()
+                        DataPersistenceManager.shared.fetchArticles { articles in
+                            response.status = "200"
+                            response.totalResults = articles.count
+                            response.articles = articles
+                            completion(response as! T)
+                        }
                         AppAlert.showInternetConnectionErrorAlert {
                             AppIndicator.shared.show(isGif: false)
-                            self.send(data: nil, completion: completion)
+//                            self.send(data: nil, completion: completion)
                         }
                     case .canNotDecodeData:
                         AppAlert.showSomethingError()

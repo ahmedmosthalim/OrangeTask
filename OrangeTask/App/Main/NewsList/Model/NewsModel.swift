@@ -11,9 +11,9 @@ import Foundation
 
 class NewsModel: Codable {
     
-    var status: String
-    var totalResults: Int
-    var articles: [Article]
+    var status: String?
+    var totalResults: Int?
+    var articles: [Article]?
     
     enum CodingKeys : String , CodingKey {
         case status
